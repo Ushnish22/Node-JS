@@ -3,7 +3,6 @@ const path=require('path');
 const http=require('http');
 
 const express=require('express');
-
 const bodyParser=require('body-parser');
 
 const app=express();
@@ -15,7 +14,7 @@ const successRoutes=require('./routes/success');
 
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use('/admin', adminRoutes);
+app.use('/admin',adminRoutes);
 app.use(contactRoutes);
 app.use(successRoutes);
 app.use(shopRoutes);
